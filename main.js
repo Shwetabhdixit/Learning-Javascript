@@ -78,3 +78,4 @@ const person =
     }
 }
 console.log(person.firstName, person.lastName);
+
