@@ -1,6 +1,7 @@
+/*
 console.log("hello world");
 
-/*
+
 ### declaring variables
 
 let - variable value
@@ -63,7 +64,7 @@ console.log(fruits.indexOf('oranges'));
 console.log(fruits);
 
 ### Object literals
-*/
+
 
 const person = 
 {
@@ -78,4 +79,104 @@ const person =
     }
 }
 console.log(person.firstName, person.lastName);
+console.log(person.hobbies[1]);
+console.log(person.address.street);
+
+const {firstName,lastName,address: {city}} = person; //pulling these values from the person object
+console.log(firstName);
+console.log(city);
+person.email = 'john@gmail.com'; // adding properties to the person obejct
+const todos = [
+    {
+        id:1,
+        text:'take out trash',
+        isCompleted: true
+    },
+    {
+        id:2,
+        text:'meeting with boss',
+        isCompleted: true
+    },
+    {
+        id:3,
+        text:'dentist appointment',
+        isCompleted: false
+    }   
+];
+
+console.log(todos[1].text);
+
+ //converting to JSON
+ const todoJSON = JSON.stringify(todos);
+ console.log(todoJSON);
+
+###loops
+
+##for loop
+
+
+for(let i=0;i<10;i++)
+{
+    console.log(`For loop Number: ${i}`);
+}
+
+##while loop
+
+let i=0;
+while(i<10)
+{
+    console.log(`while loop number:${i}`);
+    i++;
+}
+for(let i=0;i<todos.length;i++)
+{
+    console.log((todos[i].text));
+}
+
+for(let todo of todos)
+{
+    console.log(todo.text);
+}
+
+##for each loop
+
+todos.forEach(function(todo)
+{
+    console.log(todo.text);
+});
+
+## map
+const todoText = todos.map(function(todo) // map returns an array
+{
+    return todo.text;
+});
+console.log(todoText);
+
+##filter
+*/
+const todos = [
+    {
+        id:1,
+        text:'take out trash',
+        isCompleted: true
+    },
+    {
+        id:2,
+        text:'meeting with boss',
+        isCompleted: true
+    },
+    {
+        id:3,
+        text:'dentist appointment',
+        isCompleted: false
+    }   
+];
+
+const todoCompleted = todos.filter(function(todo) //filter an array accroding to a particular condition
+{
+    return todo.isCompleted === true;
+});
+console.log(todoCompleted);
+
+
 
