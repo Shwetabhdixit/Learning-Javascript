@@ -47,10 +47,34 @@ console.log(s.split(','));
 
 ### arrays
 
-*/
 const nums = new Array(1,2,3,4,5); // new means a constructor.
 const fruits = ['apples','oranges','pears',1,true]; //heterogenous arrays
 console.log(fruits[3]) // outputs 1
 fruits[3] = 'grapes';
-console.log(fruits); // outputs
+console.log(fruits);
 
+fruits.push('mangoes'); //add at last
+fruits.unshift('strwaberries'); //add at first
+fruits. pop(); //remove last value
+
+
+console.log(Array.isArray(fruits)); // check if something is an array
+console.log(fruits.indexOf('oranges'));
+console.log(fruits);
+
+### Object literals
+*/
+
+const person = 
+{
+    firstName: 'John',
+    lastName: 'Doe',
+    age : 30,
+    hobbies : ['music','movies','sports'],
+    address :{
+        street: '50 main st',
+        city: 'Boston',
+        state : 'MA'
+    }
+}
+console.log(person.firstName, person.lastName);
