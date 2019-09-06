@@ -153,7 +153,7 @@ const todoText = todos.map(function(todo) // map returns an array
 console.log(todoText);
 
 ##filter
-*/
+
 const todos = [
     {
         id:1,
@@ -175,8 +175,48 @@ const todos = [
 const todoCompleted = todos.filter(function(todo) //filter an array accroding to a particular condition
 {
     return todo.isCompleted === true;
+}).map(function(todo)
+{
+    return todo.text;
 });
 console.log(todoCompleted);
+
+### conditionals
+
+const x = 10;
+const y=5;
+
+if(x==10 && y==5)
+{
+    console.log('x is 10 and y is 5');
+}
+else if(x>10)
+{
+    console.log('x is greater than 10');
+}
+else{
+    console.log('x is less than 10');
+}
+
+//ternary operator
+const x=10;
+
+const color = x>10 ?'red':'blue';
+
+switch(color)
+{
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log('color is blue');
+        break;
+    default:
+        console.log('color is NOT red or blue');
+        break;
+
+}
+*/
 
 
 
