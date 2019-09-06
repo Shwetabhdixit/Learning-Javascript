@@ -216,7 +216,28 @@ switch(color)
         break;
 
 }
+###functions
+
+function adddNums(num1,num2)
+{
+    console.log(num1+num2);
+}
+//addNums(); returns Nan - not a number
+
+console.log(adddNums(5,5)); // retuns 10 
+
+//arrow function - introduced in ES6
+
+const addNums = (num1 = 1,num2= 2) => console.log(num1+num2);
+addNums(5,5);
+
+const addNums2 = (num1=1,num2=1) => {return num1+num2;}
+console.log(addNums2(5,5));
+
+const arr1 = ['hello','world','friend'];
+arr1.forEach((arrele) => console.log(arrele)); // arrow function inside for each loop
+
+###object oriented programming
+
 */
-
-
 
